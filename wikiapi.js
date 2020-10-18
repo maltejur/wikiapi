@@ -1,17 +1,6 @@
 ﻿'use strict';
 
-let CeL;
-
-try {
-	// Load CeJS library.
-	CeL = require('cejs');
-} catch (e) /* istanbul ignore next: Only for debugging locally */ {
-	// https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md
-	// const wikiapi = require('./wikiapi.js');
-	require('./_CeL.loader.nodejs.js');
-	CeL = globalThis.CeL;
-}
-// assert: typeof CeL === 'function'
+const CeL = require('cejs');
 
 // Load modules.
 // @see `wiki loader.js`:
